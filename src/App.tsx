@@ -1,10 +1,13 @@
+import {Route, Routes} from 'react-router-dom';
+import Homepage from './pages/homepage/Homepage';
+
 
 function App() {
-
+  console.log("checkingg")
   return (
-    <div className="App">
-      <h1>This is the kanchan</h1>
-    </div>
+    <Routes>
+      <Route path='/' element={<Homepage/>}/>
+    </Routes>
   )
 }
 
