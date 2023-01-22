@@ -3,7 +3,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>This is the APP</h1>
+      <h1>This is the kanchan</h1>
     </div>
   )
 }
