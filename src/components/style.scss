@@ -1,0 +1,56 @@
+@import"../colors.scss";
+
+.hero_slider_wrapper{
+  background-color: rgb(246, 246, 246);
+  padding: 40px;
+  max-width: 2000px;
+  margin: 0 auto;
+
+  .hero_slide{
+    position: relative;
+  }
+
+  .slide_button{
+    color: white;
+    background-color: $blue;
+    border-radius: 0;
+    padding: 10px 50px;
+    position: absolute;
+    bottom: 20%;
+    left: 14%;
+    z-index: 10;
+    &:hover{
+      background-color: $blue;
+    }
+  }
+
+  .carousel.carousel-slider .control-prev{
+    color: rgb(0, 0, 0) !important;
+    left: 2%;
+    &:hover{
+      background-color: transparent;
+    }
+    &::before{
+      content: '<';
+      border-right: none;
+      transform: scaleX(2) scaleY(3);
+      height: 20px;
+      
+    }
+  }
+
+  .carousel.carousel-slider .control-next{
+    color: rgb(0, 0, 0) !important;
+    right: 2%;
+    &:hover{
+      background-color: transparent;
+    }
+    &::before{
+      content: '>';
+      border-left: none;
+      transform: scaleX(2) scaleY(3);
+      height: 20px;
+      
+    }
+  }
+}
