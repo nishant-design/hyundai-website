@@ -3,6 +3,8 @@
 .hero_slider_wrapper{
   background-color: rgb(246, 246, 246);
   padding: 40px;
+  max-width: 2000px;
+  margin: 0 auto;
 
   .hero_slide{
     position: relative;
@@ -17,6 +19,9 @@
     bottom: 20%;
     left: 14%;
     z-index: 10;
+    &:hover{
+      background-color: $blue;
+    }
   }
 
   .carousel.carousel-slider .control-prev{

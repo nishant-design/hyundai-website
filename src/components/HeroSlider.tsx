@@ -37,8 +37,8 @@ const heroSlider = [
 ];
 
 const carouselSettings={
-  // autoPlay: true,
-  // infiniteLoop: true,
+  autoPlay: true,
+  infiniteLoop: true,
   showStatus: false,
   showThumbs: false,
 }
