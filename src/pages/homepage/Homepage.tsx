@@ -1,9 +1,9 @@
-import HeroSlider from '../../components/HeroSlider';
+import HeroSlider from "../../components/Homepage/heroSlider/HeroSlider";
 
 const Homepage = () => {
   return (
     <>
-      <HeroSlider/>
+      <HeroSlider />
     </>
   )
 }
