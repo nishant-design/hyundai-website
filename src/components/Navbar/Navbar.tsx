@@ -1,19 +1,17 @@
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import LOGO from "../../assets/hyundai-logo.svg";
+import { NAV_PAGES } from "./constants";
 import HeaderModal from "./HeaderModal";
 import useNavbar from "./hooks/useNavbar";
-import { NAV_PAGES } from "./constants";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import './style.scss';
 
 const Navbar = () => {
