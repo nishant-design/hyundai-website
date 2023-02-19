@@ -1,0 +1,79 @@
+{
+  "used-cars": [
+    {
+      "id": 1,
+      "name": "i20",
+      "price": "500000",
+      "km_driven": "17711",
+      "fuel": "petrol",
+      "transmission": "automatic",
+      "mfg_year": "2019",
+      "photos": [
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-right-front-three-quarter-7.jpeg?q=75",
+        "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/i20/6986/1604567349336/front-left-side-47.jpg?tr=w-375",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-rear-view.jpeg?q=75",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-front-view.jpeg?q=75"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "i20",
+      "price": "500000",
+      "km_driven": "17711",
+      "fuel": "petrol",
+      "transmission": "automatic",
+      "mfg_year": "2019",
+      "photos": [
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-right-front-three-quarter-7.jpeg?q=75",
+        "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/i20/6986/1604567349336/front-left-side-47.jpg?tr=w-375",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-rear-view.jpeg?q=75",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-front-view.jpeg?q=75"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "i20",
+      "price": "500000",
+      "km_driven": "17711",
+      "fuel": "petrol",
+      "transmission": "automatic",
+      "mfg_year": "2019",
+      "photos": [
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-right-front-three-quarter-7.jpeg?q=75",
+        "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/i20/6986/1604567349336/front-left-side-47.jpg?tr=w-375",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-rear-view.jpeg?q=75",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-front-view.jpeg?q=75"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "i20",
+      "price": "500000",
+      "km_driven": "17711",
+      "fuel": "petrol",
+      "transmission": "automatic",
+      "mfg_year": "2019",
+      "photos": [
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-right-front-three-quarter-7.jpeg?q=75",
+        "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/i20/6986/1604567349336/front-left-side-47.jpg?tr=w-375",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-rear-view.jpeg?q=75",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-front-view.jpeg?q=75"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "i20",
+      "price": "500000",
+      "km_driven": "17711",
+      "fuel": "petrol",
+      "transmission": "automatic",
+      "mfg_year": "2019",
+      "photos": [
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-right-front-three-quarter-7.jpeg?q=75",
+        "https://stimg.cardekho.com/images/carexteriorimages/930x620/Hyundai/i20/6986/1604567349336/front-left-side-47.jpg?tr=w-375",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-rear-view.jpeg?q=75",
+        "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40530/i20-exterior-front-view.jpeg?q=75"
+      ]
+    }
+  ]
+}

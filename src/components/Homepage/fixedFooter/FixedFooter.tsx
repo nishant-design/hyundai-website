@@ -7,8 +7,8 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 const FixedFooter = () => {
   return (
     <Box bgcolor="primary.main" py={2} position="fixed" bottom="0" width="100%" display="flex" alignItems="center" justifyContent="center" columnGap="80px">
-      {FIXED_FOOTER_CONTENT.map((item) => (
-        <Link to={item.link} style={{textDecoration: "none", display: 'flex', alignItems: "center", columnGap: "10px" }}>
+      {FIXED_FOOTER_CONTENT.map((item, i) => (
+        <Link key={i} to={item.link} style={{textDecoration: "none", display: 'flex', alignItems: "center", columnGap: "10px" }}>
           <AddShoppingCartIcon fontSize="large" sx={{color: "#fff"}} />
           <Typography fontWeight="600" fontSize="larger" color="white">{item.name}</Typography>
         </Link>
