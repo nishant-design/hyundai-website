@@ -12,11 +12,13 @@ import LOGO from "../../assets/hyundai-logo.svg";
 import { NAV_PAGES } from "./constants";
 import HeaderModal from "./HeaderModal";
 import useNavbar from "./hooks/useNavbar";
-import './style.scss';
+import "./style.scss";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { showNavModal, handleNavModalClose, toggleNavModal, selectedVehicleCategory, setSelectedVehicleCategory } = useNavbar();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -25,6 +27,10 @@ const Navbar = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const headerlink = (link: string) => {
+    navigate(link)
+  }
 
   return (
     <Box className="navbar">
@@ -101,16 +107,27 @@ const Navbar = () => {
 
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, columnGap: { md: 5 } }}>
               {NAV_PAGES.map((page) => (
-                <Typography key={page.name} onClick={page.subMenu ? toggleNavModal : () => {}} sx={{ color: "#666", cursor: "pointer", display: "flex", alignItems: "center", columnGap: 1 }}>
+                <Typography
+                  key={page.name}
+                  onClick={page.subMenu ? toggleNavModal : () => headerlink(page.link)}
+                  sx={{ color: "#666", cursor: "pointer", display: "flex", alignItems: "center", columnGap: 1 }}
+                >
                   {page.name}
-                  {page.subMenu && <KeyboardArrowDownIcon fontSize="small" color="primary" className={`${showNavModal && 'rotate_icon'}`} />}
+                  {page.subMenu && <KeyboardArrowDownIcon fontSize="small" color="primary" className={`${showNavModal && "rotate_icon"}`} />}
                 </Typography>
               ))}
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
-      {<HeaderModal showModal={showNavModal} handleClose={handleNavModalClose} selectedVehicle={selectedVehicleCategory} setSelectedVehicle={setSelectedVehicleCategory} />}
+      {
+        <HeaderModal
+          showModal={showNavModal}
+          handleClose={handleNavModalClose}
+          selectedVehicle={selectedVehicleCategory}
+          setSelectedVehicle={setSelectedVehicleCategory}
+        />
+      }
     </Box>
   );
 };

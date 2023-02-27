@@ -17,7 +17,7 @@
     },
     {
       "id": 2,
-      "name": "i20",
+      "name": "Verna",
       "price": "500000",
       "km_driven": "17711",
       "fuel": "petrol",
@@ -32,7 +32,7 @@
     },
     {
       "id": 3,
-      "name": "i20",
+      "name": "Venue",
       "price": "500000",
       "km_driven": "17711",
       "fuel": "petrol",
@@ -47,7 +47,7 @@
     },
     {
       "id": 4,
-      "name": "i20",
+      "name": "Creta",
       "price": "500000",
       "km_driven": "17711",
       "fuel": "petrol",
@@ -62,7 +62,7 @@
     },
     {
       "id": 5,
-      "name": "i20",
+      "name": "Nexon",
       "price": "500000",
       "km_driven": "17711",
       "fuel": "petrol",
