@@ -21,7 +21,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="used-cars" element={<UsedCars/>}/>
+          <Route path="preowned" element={<UsedCars/>}/>
           <Route path="buy-used-car/:id" element={<CarDetailPage/>}/>
         </Routes>
       </BrowserRouter>
