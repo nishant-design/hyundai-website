@@ -49,9 +49,9 @@ const HeroSlider = () => {
     <div className="hero_slider_wrapper">
         <Carousel {...carouselSettings}>
           {
-            heroSlider.map((item: {img: string, link:string}, i: number) => {
+            heroSlider.map((item: {img: string, link:string}) => {
               return (
-                <div className="hero_slide" key={i}>
+                <div className="hero_slide">
                   <img src={item.img} style={{width: '100%'}}/>
                   <Button sx={{bgColor: BLUE}} className="slide_button">Know More</Button>
                 </div>
