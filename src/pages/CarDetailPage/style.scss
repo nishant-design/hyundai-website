@@ -1,0 +1,12 @@
+.car_detail_page {
+  .carousel {
+    .thumbs-wrapper {
+      margin: 12px 0 !important ;
+      .thumb {
+        width: 160px !important;
+        border-radius: 4px !important;
+        img{border-radius: 4px !important;}
+      }
+    }
+  }
+}
