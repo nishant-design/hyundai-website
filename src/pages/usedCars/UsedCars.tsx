@@ -3,18 +3,18 @@ import UsedCarCard from "../../components/usedCar/UsedCarCard";
 import useUsedCars from "./hooks/useUsedCars";
 import { UsedCarType } from "../../slice/carSlice";
 import CircularProgress from "@mui/material/CircularProgress";
-import { Container } from "@mui/material";
+import { Container, Paper } from "@mui/material";
+import UsedCarsFilters from "../../components/usedCar/UsedCarsFilters";
 
 const UsedCars = () => {
   const { usedCars } = useUsedCars();
-  console.log(usedCars, "used Crads");
 
   return (
     <Container maxWidth="xl">
-      <Box display="flex" p={4} columnGap={6}>
-        <Box border={1} maxWidth={350} width="100%" p={2}>
-          Side Menu
-        </Box>
+      <Box display="flex" p={4} columnGap={4}>
+        <Paper sx={{ maxWidth: "350px", width: "100%", padding: "20px" }}>
+          <UsedCarsFilters />
+        </Paper>
 
         {usedCars.loading ? (
           <Box flexGrow={1} minHeight="85vh" display="flex" justifyContent="center" alignItems="center">

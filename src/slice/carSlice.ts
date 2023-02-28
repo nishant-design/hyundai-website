@@ -6,6 +6,12 @@ const initialState: InitialStateType = {
   cars: [],
   selectedCar: {},
   error: '',
+  usedCarFilters:{
+    priceRange: {
+      min: 50000,
+      max: 500000,
+    }
+  }
 }
 
 export const fetchUsedCars = createAsyncThunk('car/fetchUsedCars', async () => {
@@ -21,7 +27,11 @@ export const fetchCarDetail = createAsyncThunk('car/carDetail',async (id: string
 const carSlice = createSlice({
   name: "car",
   initialState,
-  reducers: {},
+  reducers: {
+    changeFilterMaxPrice(state, action: PayloadAction<number>){
+      state.usedCarFilters.priceRange.max = action.payload;
+    }
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchUsedCars.pending, (state) => {state.loading = true});
     builder.addCase(fetchUsedCars.fulfilled, (state, action: PayloadAction<UsedCarType[]>) => {
@@ -47,6 +57,7 @@ const carSlice = createSlice({
   }
 });
 
+export const {changeFilterMaxPrice} = carSlice.actions;
 export default carSlice.reducer;
 
 type InitialStateType = {
@@ -54,6 +65,12 @@ type InitialStateType = {
   cars: UsedCarType[];
   selectedCar: UsedCarType | any,
   error: string | undefined;
+  usedCarFilters: {
+    priceRange: {
+      min: number;
+      max: number
+    }
+  }
 }
 
 export type UsedCarType = {
