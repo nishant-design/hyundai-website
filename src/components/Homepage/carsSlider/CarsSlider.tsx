@@ -19,7 +19,7 @@ export default function CarsSlider() {
     <Grid className="cars-slider">
       <Card>
       <CardContent>
-      <Typography variant="h5" component="div">Help me Choose Model</Typography>
+      <Typography variant="h5" component="div">Locate Us </Typography>
       <br />
       <Grid container spacing={3}>
         <Grid item xs={6} sm={6} md={4} lg={3} xl={3}>
@@ -37,6 +37,7 @@ export default function CarsSlider() {
                 {'"a benevolent smile"'}
               </Typography>
             </CardContent>
+
           </Card>
         </Grid>
         <Grid item xs={6} sm={6} md={4} lg={3} xl={3}>
