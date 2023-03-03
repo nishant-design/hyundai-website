@@ -4,30 +4,31 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import { Carousel } from "react-responsive-carousel";
+import Slider from "react-slick";
 import { Box } from "@mui/system";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import "./style.scss";
 import { Link } from "react-router-dom";
 
 const carouselSettings = {
-  showThumbs: false,
+  dots: true,
+  accessibility: true,
 };
 
 const UsedCarCard = ({ props }: any) => {
   const { name, price, km_driven, photos, fuel, mfg_year, transmission, id } = props;
   return (
     <Card sx={{ maxWidth: 300 }} className="usedCar_card">
-      <Carousel {...carouselSettings}>
+      <Slider {...carouselSettings}>
         {photos?.map((img: string, i: number) => (
           <CardMedia key={i} component="img" height="180" image={img} />
         ))}
-      </Carousel>
+      </Slider>
 
       <CardActionArea>
         <Link to={`/buy-used-car/${id}`} style={{textDecoration: "none"}}>
           <CardContent>
-            <Typography variant="h5" color="primary">
+            <Typography variant="h6" color="primary">
               {mfg_year} {name}
             </Typography>
 
