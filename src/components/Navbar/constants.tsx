@@ -12,6 +12,11 @@ export const NAV_PAGES = [
     subMenu: false,
   },
   {
+    name: "Book a Service",
+    link: "/book-service",
+    subMenu: false,
+  },
+  {
     name: "Career",
     link: "/career",
     subMenu: false,
