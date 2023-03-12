@@ -1,11 +1,27 @@
 .car_detail_page {
-  .carousel {
-    .thumbs-wrapper {
-      margin: 12px 0 !important ;
-      .thumb {
-        width: 160px !important;
-        border-radius: 4px !important;
-        img{border-radius: 4px !important;}
+  .slick-slider{
+    .slick-prev{left: 25px; z-index: 1;}
+    .slick-next{right: 25px}
+    .slick-track {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
+    .slick-slide {
+      height: auto; 
+      div{
+        height: 100%;
+        img{
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
+    .slick-dots li.slick-active button{
+      &::before{
+        color: #002c5f;
       }
     }
   }

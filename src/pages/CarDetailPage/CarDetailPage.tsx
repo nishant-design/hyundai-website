@@ -4,7 +4,7 @@ import { fetchCarDetail } from "../../slice/carSlice";
 import { useParams } from "react-router-dom";
 import { Container } from "@mui/system";
 import { Box, Button, Typography } from "@mui/material";
-import { Carousel } from "react-responsive-carousel";
+import Slider from "react-slick";
 import { UsedCarType } from "../../slice/carSlice";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
@@ -15,6 +15,11 @@ import "./style.scss";
 import CarOverview from "../../components/CarOverview";
 import HyundaiAssuraed from "../../components/HyundaiAssuraed";
 import InspectionReport from "../../components/InspectionReport";
+
+const settings = {
+  arrows: true,
+  dots: true,
+};
 
 const CarDetailPage = () => {
   const selectedCar: UsedCarType = useAppSelector((state) => state.car.selectedCar);
@@ -27,15 +32,15 @@ const CarDetailPage = () => {
 
   return (
     <Container maxWidth="xl" sx={{ display: "flex", justifyContent: "center", columnGap: "26px", padding: "32px 0" }} className="car_detail_page">
-      <Box sx={{ width: "60%", }}>
-        <Carousel >
+      <Box sx={{ width: "60%" }}>
+        <Slider {...settings}>
           {selectedCar?.photos?.map((img: string, i: number) => (
-            <img key={i} src={img} width="100%" height="100%" style={{ borderRadius: "8px", objectFit: 'cover' }} />
+            <img key={i} src={img} className="used_car_picture" />
           ))}
-        </Carousel>
-        <CarOverview/>
-        <HyundaiAssuraed/>
-        <InspectionReport/>
+        </Slider>
+        <CarOverview />
+        <HyundaiAssuraed />
+        <InspectionReport />
       </Box>
 
       <Box sx={{ width: "30%" }}>
@@ -101,7 +106,10 @@ const CarDetailPage = () => {
           </Box>
 
           <Typography variant="caption">
-            <Typography display="inline-block" variant="caption" fontWeight={600} color="primary">Guaranteed Buyback:</Typography> Return this car to us within a tenure of 6, 12 or 18 months at guaranteed prices.
+            <Typography display="inline-block" variant="caption" fontWeight={600} color="primary">
+              Guaranteed Buyback:
+            </Typography>{" "}
+            Return this car to us within a tenure of 6, 12 or 18 months at guaranteed prices.
           </Typography>
         </Box>
       </Box>
