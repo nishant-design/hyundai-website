@@ -1,0 +1,28 @@
+.car_detail_page {
+  .slick-slider{
+    .slick-prev{left: 25px; z-index: 1;}
+    .slick-next{right: 25px}
+    .slick-track {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
+    .slick-slide {
+      height: auto; 
+      div{
+        height: 100%;
+        img{
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+      }
+    }
+    .slick-dots li.slick-active button{
+      &::before{
+        color: #002c5f;
+      }
+    }
+  }
+}
