@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
-import { BLUE } from "../../../colors";
+import { BLUE, GRAY_TEXT } from "../../../colors";
 import DirectionsCarOutlinedIcon from "@mui/icons-material/DirectionsCarOutlined";
 import Tucson from "../../../assets/tucson.png";
 import LocalCarWashOutlinedIcon from "@mui/icons-material/LocalCarWashOutlined";
@@ -10,7 +10,7 @@ import CurrencyRupeeOutlinedIcon from '@mui/icons-material/CurrencyRupeeOutlined
 
 const WhyChooseUs = () => {
   return (
-    <Box bgcolor={BLUE} py={10}>
+    <Box bgcolor={BLUE} py={10} my={10}>
       <Container maxWidth="lg">
         <Grid container spacing={6}>
           <Grid item xs={12} lg={6}>
@@ -91,7 +91,7 @@ const WhyChooseUsCard = ({ icon, cardNo, heading, desc, style }: any) => (
     <Typography color="primary" variant="h6" fontWeight={600} my={2}>
       {heading}
     </Typography>
-    <Typography color="#666" variant="subtitle1">
+    <Typography color={GRAY_TEXT} variant="subtitle1">
       {desc}
     </Typography>
   </Box>

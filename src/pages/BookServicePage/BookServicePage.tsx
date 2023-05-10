@@ -22,7 +22,7 @@ const BookServicePage = () => {
 
   return (
     <Container>
-      <Typography variant="h6" fontWeight={600} color="primary" textAlign="center">
+      <Typography variant="h6" fontWeight={600} color="primary" textAlign="center" my={6}>
         SCHEDULE YOUR SERVICES
       </Typography>
       <Typography variant="body2" fontWeight={600} bgcolor="#ccc" my={2} py={1} textAlign="center">
@@ -111,7 +111,10 @@ const BookServicePage = () => {
       </Grid>
 
       <CustomAccordion data={ACCORDION_DATA} />
-    </Container>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+          </Container>
+   
   );
 };
 
