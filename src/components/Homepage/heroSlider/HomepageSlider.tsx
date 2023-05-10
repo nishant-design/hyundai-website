@@ -15,7 +15,7 @@ let settings = {
 
 const HomepageSlider = () => {
   return (
-    <Box my={4} mb={16}>
+    <Box my={4} mb={4}>
       <Container maxWidth="lg">
         <Paper sx={{ padding: "16px", border: "1px solid #eee" }}>
           <Typography color="primary" variant="h6" fontWeight={600} mb={2}>
