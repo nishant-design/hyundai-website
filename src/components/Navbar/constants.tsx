@@ -12,6 +12,11 @@ export const NAV_PAGES = [
     subMenu: false,
   },
   {
+    name: "Book a Service",
+    link: "/book-service",
+    subMenu: false,
+  },
+  {
     name: "Career",
     link: "/career",
     subMenu: false,
@@ -29,32 +34,32 @@ export const FIND_A_CAR_SUBMENU = [
     cars: [
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
     ],
@@ -64,22 +69,22 @@ export const FIND_A_CAR_SUBMENU = [
     cars: [
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
     ],
@@ -89,32 +94,32 @@ export const FIND_A_CAR_SUBMENU = [
     cars: [
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
     ],
@@ -124,17 +129,17 @@ export const FIND_A_CAR_SUBMENU = [
     cars: [
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
       {
         year: '2022',
-        name: "kanchan Hi-speed",
+        name: "Tucson",
         img: I20,
       },
     ],

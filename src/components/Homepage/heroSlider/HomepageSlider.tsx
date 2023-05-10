@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardContent, CardMedia, Paper, Typography } from "@mui/material";
+import { Card, CardActionArea, CardContent, CardMedia, Paper, Typography, TextField } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
@@ -8,8 +8,25 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import CardActions from '@mui/material/CardActions';
 import Grid from '@mui/material/Grid';
 import './style.scss';
-
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import SliderImgTwo from "../../../assets/hero_slider/01.png";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import DeleteIcon from '@mui/icons-material/Delete';
 let settings = {
+  arrows: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  className: "homepage_slider",
+  centerPadding: '50px',
+};
+let settings1 = {
   arrows: true,
   infinite: true,
   slidesToShow: 3,
@@ -17,103 +34,296 @@ let settings = {
   className: "homepage_slider",
   centerPadding: '50px',
 };
-
 const HomepageSlider = () => {
   return (
-    <Box my={4} mb={16}>
-      <Container maxWidth="lg">
-        <Paper sx={{ padding: "16px", border: "1px solid #eee" }}>
+    <Box mb={8}>
+      <Box className="bg-position" sx={{ width: '100%' }}  >
+        <Container>
+          <h1 className="text-center pt-25">ABOUT CAPITAL HYUNDAI
+          </h1>
+          <br></br> <br></br>
+          <Grid container spacing={2}>
+
+            <Grid item xs={7}>
+              <img src={SliderImgTwo} />
+            </Grid>
+            <Grid xs={5} my={4} >
+              <div className="bg-light">
+                <h2 className="site-title">
+                  World Largest <span>Car Dealer</span> Marketplace.
+                </h2>
+                <p className="about-content">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                <div className="about-list-wrapper">
+                  <ul className="about-list list-unstyled">
+                    <li >
+                      <CheckCircleOutlineIcon className="site-title1" />  At vero eos et accusamus et iusto odio.
+                    </li>
+                    <li>
+                      <CheckCircleOutlineIcon className="site-title1" />   Established fact that a reader will be distracted.
+                    </li>
+                    <li>
+                      <CheckCircleOutlineIcon className="site-title1" />  Sed ut perspiciatis unde omnis iste natus sit.
+                    </li>
+                  </ul>
+                  <br></br> <br></br>
+                  <Button variant="contained">Read More</Button>
+                </div>
+              </div>
+
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+
+      <Container maxWidth="lg" className="mt-top" >
+        <Paper sx={{ padding: "16px", border: "1px solid #eee", background: "#f0f8ff" }}>
           <Typography color="primary" variant="h6" fontWeight={600} mb={2}>
             Find a Car
           </Typography>
-          <Slider {...settings}>
-            <UpcomingCarsCard />
-            <UpcomingCarsCard />
-            <UpcomingCarsCard />
-            <UpcomingCarsCard />
-            <UpcomingCarsCard />
-            <UpcomingCarsCard />
-            <UpcomingCarsCard />
-            <UpcomingCarsCard />
-            <UpcomingCarsCard />
-            <UpcomingCarsCard />
-          </Slider>
+          <Grid container spacing={2} mb={4}>
+            <Grid item xl={3} lg={3} md={3} sm={6} xs={6}>
+              <FormControl fullWidth sx={{ background: "#fff" }}>
+                <InputLabel id="demo-simple-select-label">Body Type</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  label="Age"
+                >
+                  <MenuItem value={10}>Hatchback</MenuItem>
+                  <MenuItem value={20}>Sedan</MenuItem>
+                  <MenuItem value={30}>SUV</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+
+            <Grid item xl={3} lg={3} md={3} sm={6} xs={6}>
+              <FormControl fullWidth sx={{ background: "#fff" }}>
+                <InputLabel id="demo-simple-select-label">Transmission</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  label="Age"
+                >
+                  <MenuItem value={10}>Automatic</MenuItem>
+                  <MenuItem value={20}>Manual</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+
+            <Grid item xl={3} lg={3} md={3} sm={6} xs={6}>
+              <FormControl fullWidth sx={{ background: "#fff" }}>
+                <InputLabel id="demo-simple-select-label">Fuel</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  label="Age"
+                >
+                  <MenuItem value={10}>Petrol</MenuItem>
+                  <MenuItem value={20}>Diesel</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+
+            <Grid item xl={3} lg={3} md={3} sm={6} xs={6}>
+              <FormControl fullWidth sx={{ background: "#fff" }}>
+                <InputLabel id="demo-simple-select-label">Feature</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  label="Age"
+                >
+                  <MenuItem value={10}>Sunroof</MenuItem>
+                  <MenuItem value={20}>Sunroof</MenuItem>
+                  <MenuItem value={30}>Sunroof</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+              <Button variant="contained">Search Car</Button>
+            </Grid>
+          </Grid>
         </Paper>
+      </Container>
+      <br /><br /><br /><br />
+      <Container maxWidth="lg">
+        <Slider {...settings}>
+          <UpcomingCarsCard />
+          <UpcomingCarsCard />
+          <UpcomingCarsCard />
+          <UpcomingCarsCard />
+          <UpcomingCarsCard />
+          <UpcomingCarsCard />
+          <UpcomingCarsCard />
+          <UpcomingCarsCard />
+          <UpcomingCarsCard />
+          <UpcomingCarsCard />
+        </Slider>
+
+
+
+      </Container>
+      <br></br> <br></br>
+      <Container maxWidth="lg">
+        <h2 className="site-title text-center">Latest News &amp; <span>Blog</span></h2>
+        <br></br> <br></br>
+        <Slider {...settings1}>
+          <Blog />
+          <Blog />
+          <Blog />
+          <Blog />
+          <Blog />
+          <Blog />
+          <Blog />
+          <Blog />
+          <Blog />
+          <Blog />
+        </Slider>
+
+
+
       </Container>
 
       <Container maxWidth="lg">
-      <Grid container spacing={2} my={4} mb={16}>
-      <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-      <Typography color="primary" variant="h6" fontWeight={600} mb={2}>
-           Locate Us
-          </Typography>
+        <Grid container spacing={2} my={4} mb={16}>
+          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+            <Typography color="primary" variant="h6" fontWeight={600} mb={2}>
+              Locate Us
+            </Typography>
           </Grid>
-      <Grid item xl={3} lg={3} md={3} sm={6} xs={12}>
-      <Card>
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Noida
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9526633137393!2d77.37661251511022!3d28.631180790892877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff42517c425%3A0x2d10f8fca4ad996f!2sCapital%20Hyundai!5e0!3m2!1sen!2sin!4v1678438109521!5m2!1sen!2sin" width="100%" height="150" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="map"></iframe>
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-     </Grid>
+          <Grid item xl={3} lg={3} md={3} sm={6} xs={12}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Noida
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9526633137393!2d77.37661251511022!3d28.631180790892877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff42517c425%3A0x2d10f8fca4ad996f!2sCapital%20Hyundai!5e0!3m2!1sen!2sin!4v1678438109521!5m2!1sen!2sin" width="100%" height="150" loading="lazy" className="map"></iframe>
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </Grid>
 
-     <Grid item xl={3} lg={3} md={3} sm={6} xs={12}>
-     <Card>
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Noida
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9526633137393!2d77.37661251511022!3d28.631180790892877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff42517c425%3A0x2d10f8fca4ad996f!2sCapital%20Hyundai!5e0!3m2!1sen!2sin!4v1678438109521!5m2!1sen!2sin" width="100%" height="150" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="map"></iframe>
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-     </Grid>
+          <Grid item xl={3} lg={3} md={3} sm={6} xs={12}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Noida
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9526633137393!2d77.37661251511022!3d28.631180790892877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff42517c425%3A0x2d10f8fca4ad996f!2sCapital%20Hyundai!5e0!3m2!1sen!2sin!4v1678438109521!5m2!1sen!2sin" width="100%" height="150" loading="lazy" className="map"></iframe>
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </Grid>
 
-     <Grid item xl={3} lg={3} md={3} sm={6} xs={12}>
-     <Card>
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Noida
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9526633137393!2d77.37661251511022!3d28.631180790892877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff42517c425%3A0x2d10f8fca4ad996f!2sCapital%20Hyundai!5e0!3m2!1sen!2sin!4v1678438109521!5m2!1sen!2sin" width="100%" height="150" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="map"></iframe>
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-     </Grid>
-     
-     <Grid item xl={3} lg={3} md={3} sm={6} xs={12}>
-     <Card>
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Noida
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9526633137393!2d77.37661251511022!3d28.631180790892877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff42517c425%3A0x2d10f8fca4ad996f!2sCapital%20Hyundai!5e0!3m2!1sen!2sin!4v1678438109521!5m2!1sen!2sin" width="100%" height="150" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="map"></iframe>
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-     </Grid>
-     </Grid>
+          <Grid item xl={3} lg={3} md={3} sm={6} xs={12}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Noida
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9526633137393!2d77.37661251511022!3d28.631180790892877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff42517c425%3A0x2d10f8fca4ad996f!2sCapital%20Hyundai!5e0!3m2!1sen!2sin!4v1678438109521!5m2!1sen!2sin" width="100%" height="150" loading="lazy" className="map"></iframe>
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </Grid>
+
+          <Grid item xl={3} lg={3} md={3} sm={6} xs={12}>
+            <Card>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Noida
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9526633137393!2d77.37661251511022!3d28.631180790892877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff42517c425%3A0x2d10f8fca4ad996f!2sCapital%20Hyundai!5e0!3m2!1sen!2sin!4v1678438109521!5m2!1sen!2sin" width="100%" height="150" loading="lazy" className="map"></iframe>
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Learn More</Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        </Grid>
       </Container>
+      <Box className="footer-2">
+        <Container >
+          <Grid container spacing={2} className="footer-space">
+
+            <Grid item xs={3}>
+              <div className="usefull-link">
+
+                <h6 className="text-white">Sector - 63</h6>
+                <p className="text-gray">Showroom &amp; Workshop</p>
+                <p className="text-gray">H - 5, Noida</p>
+                <p className="text-gray">0120-4679999</p>
+                <p className="text-gray">9958994288</p>
+              </div>
+            </Grid>
+            <Grid item xs={3}>
+              <div className="usefull-link">
+
+                <h6 className="text-white">Sector - 63</h6>
+                <p className="text-gray">Showroom &amp; Workshop</p>
+                <p className="text-gray">H - 5, Noida</p>
+                <p className="text-gray">0120-4679999</p>
+                <p className="text-gray">9958994288</p>
+              </div>
+            </Grid>
+            <Grid item xs={3}>
+              <div className="usefull-link">
+
+                <h6 className="text-white">Sector - 63</h6>
+                <p className="text-gray">Showroom &amp; Workshop</p>
+                <p className="text-gray">H - 5, Noida</p>
+                <p className="text-gray">0120-4679999</p>
+                <p className="text-gray">9958994288</p>
+              </div>
+            </Grid>
+            <Grid item xs={3}>
+              <div className="usefull-link">
+
+                <h6 className="text-white">Sector - 63</h6>
+                <p className="text-gray">Showroom &amp; Workshop</p>
+                <p className="text-gray">H - 5, Noida</p>
+                <p className="text-gray">0120-4679999</p>
+                <p className="text-gray">9958994288</p>
+              </div>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
+      <Box className="copyright">
+        <Container>
+          <Grid container spacing={2}>
+
+            <Grid item xs={6}>
+              <div className="text-left text-white">
+                <p>©2020  India Hyundai. All right reserved. </p>
+              </div>
+            </Grid>
+            <Grid item xs={6}>
+              <div className="text-right ">
+                <Button variant="text" className="text-capital">privacy policy </Button>
+                <Button variant="text" className="text-capital">Career</Button>
+                <Button variant="text" className="text-capital">blog</Button>
+              </div>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </Box>
+
+
   );
 };
 
@@ -121,7 +331,7 @@ export default HomepageSlider;
 
 const UpcomingCarsCard = () => {
   return (
-    <Card sx={{background: ""}}>
+    <Card sx={{ background: "" }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -151,13 +361,53 @@ const UpcomingCarsCard = () => {
             </Typography> */}
 
             <ButtonGroup variant="outlined" aria-label="outlined button group" className="group-btn">
-        <Button>Test Drive</Button>
-        <Button>Download brochure </Button>
-        <Button>Price List</Button>
-      </ButtonGroup>
+              <Button>Test Drive</Button>
+              <Button>Download brochure </Button>
+              <Button>Price List</Button>
+            </ButtonGroup>
 
           </CardContent>
         </Link>
+      </CardActionArea>
+    </Card>
+  );
+};
+
+const Blog = () => {
+  return (
+    <Card sx={{ background: "" }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="180"
+          image="https://www.capitalhyundai.co.in/images/detail/Venue/hyundai-venue-latest.jpg"
+        />
+
+        <CardContent className="text-center">
+          <div className="blog-item-meta">
+            <ul>
+              <li><AccountCircleIcon className="site-title1" /> By Alicia Davis</li>
+              <li><CalendarMonthIcon className="site-title1" /> January 29, 2023</li>
+            </ul>
+          </div>
+          <Link to={`/`} style={{ textDecoration: "none", textAlign: "left" }}>
+            <Typography variant="h6" color="primary">
+              There Are Many Variations Of Passage Available.
+            </Typography></Link>
+
+
+          <Button
+
+            variant="contained"
+            endIcon={<ArrowForwardIcon />}
+            style={{ textAlign: "left", marginTop: "20px" }} >
+            Read More
+          </Button>
+
+
+
+        </CardContent>
+
       </CardActionArea>
     </Card>
   );

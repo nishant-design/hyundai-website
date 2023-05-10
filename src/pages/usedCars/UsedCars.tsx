@@ -2,12 +2,12 @@ import { Box } from "@mui/system";
 import UsedCarCard from "../../components/usedCar/UsedCarCard";
 import useUsedCars from "./hooks/useUsedCars";
 import { UsedCarType } from "../../slice/carSlice";
-import CircularProgress from "@mui/material/CircularProgress";
 import { Container, Paper } from "@mui/material";
 import UsedCarsFilters from "../../components/usedCar/UsedCarsFilters";
-
+import DB from "../../../db.json"
 const UsedCars = () => {
-  const { usedCars } = useUsedCars();
+  //const { usedCars } = useUsedCars();
+  const data =DB["used-cars"]
 
   return (
     <Container maxWidth="xl">
@@ -16,7 +16,12 @@ const UsedCars = () => {
           <UsedCarsFilters />
         </Paper>
 
-        {usedCars.loading ? (
+        <Box display="flex" flexWrap="wrap" columnGap={4} rowGap={5}>
+            {data.map((car: UsedCarType) => (
+              <UsedCarCard key={car.id} props={car} />
+            ))}
+          </Box>
+        {/* {usedCars.loading ? (
           <Box flexGrow={1} minHeight="85vh" display="flex" justifyContent="center" alignItems="center">
             <CircularProgress color="primary" />
           </Box>
@@ -26,7 +31,7 @@ const UsedCars = () => {
               <UsedCarCard key={car.id} props={car} />
             ))}
           </Box>
-        )}
+        )} */}
       </Box>
     </Container>
   );

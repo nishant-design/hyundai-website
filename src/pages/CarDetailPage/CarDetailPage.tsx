@@ -15,21 +15,22 @@ import "./style.scss";
 import CarOverview from "../../components/CarOverview";
 import HyundaiAssuraed from "../../components/HyundaiAssuraed";
 import InspectionReport from "../../components/InspectionReport";
-
+import DB from "../../../db.json"
 const settings = {
   arrows: true,
   dots: true,
 };
 
 const CarDetailPage = () => {
-  const selectedCar: UsedCarType = useAppSelector((state) => state.car.selectedCar);
+  //const selectedCar: UsedCarType = useAppSelector((state) => state.car.selectedCar);
   const dispatch = useAppDispatch();
   let { id }: any = useParams();
 
   useEffect(() => {
     dispatch(fetchCarDetail(id));
   }, []);
-
+console.log("sss" , id)
+const selectedCar =DB["used-cars"][id-1]
   return (
     <Container maxWidth="xl" sx={{ display: "flex", justifyContent: "center", columnGap: "26px", padding: "32px 0" }} className="car_detail_page">
       <Box sx={{ width: "60%" }}>
@@ -42,7 +43,7 @@ const CarDetailPage = () => {
         <HyundaiAssuraed />
         <InspectionReport />
       </Box>
-
+    
       <Box sx={{ width: "30%" }}>
         <Box border={1} borderColor={LIGHT_GRAY} p={2} borderRadius={2} position="sticky" top={32}>
           <Typography color="primary" variant="h6" fontWeight={600}>
@@ -51,8 +52,11 @@ const CarDetailPage = () => {
 
           <Box display="flex" alignItems="center" columnGap={1}>
             <Typography variant="body1" color="primary">
-              {(selectedCar.km_driven / 1000).toFixed(2)}K Km
+              {/* {(selectedCar.km_driven  / 1000).toFixed(2)}K Km */}
+              17.71K Km
+             
             </Typography>
+            
             <Typography variant="body1" color="primary" textTransform="capitalize">
               - {selectedCar.fuel} -
             </Typography>
@@ -76,7 +80,8 @@ const CarDetailPage = () => {
           <Box display="flex" alignItems="center" columnGap="1px">
             <CurrencyRupeeIcon color="primary" sx={{ fontSize: "24px" }} />
             <Typography variant="h5" color="primary" fontWeight="medium">
-              {(selectedCar.price / 100000).toFixed(2)} LAKH
+              {/* {(selectedCar?.price / 100000).toFixed(2)} LAKH */}
+              5.00 LAKH
             </Typography>
             <Box sx={{ cursor: "pointer" }} ml={1} display="flex" alignItems="center">
               <Typography variant="caption" color="#0288d1">

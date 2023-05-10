@@ -67,7 +67,7 @@ const UsedCarsFilters = () => {
           </Box>
         </Box>
       </Box>
-      <Box>
+      <Box mb={10}>
         <Typography variant="h6" color="primary" mb={1} mt={3}>
           Fuel
         </Typography>
