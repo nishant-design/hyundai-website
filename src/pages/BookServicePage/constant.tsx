@@ -1,6 +1,6 @@
 export const LOCATIONS = ["Sector-54", "Sector-54", "Sector-54"];
 
-export const CAR_MODELS = ["Kanchan Model 1", "Kanchan Model 2", "Kanchan Model 3", "Kanchan Model 4", "Kanchan Model 5", "Kanchan Model 6", "Kanchan Model 7"];
+export const CAR_MODELS = ["Model 1", "Model 2", "Model 3", "Model 4", "Model 5", "Model 6", "Model 7"];
 
 export const ACCORDION_DATA: AccordionDataType = [
   {
