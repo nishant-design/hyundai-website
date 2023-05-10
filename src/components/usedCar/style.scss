@@ -5,4 +5,17 @@
     transform: scale(1.03);
     transition: 0.1s linear;
   }
+
+  .slick-slider{
+    .slick-prev{left: 20px; z-index: 1;}
+    .slick-next{right: 20px}
+    .slick-dots{
+      bottom: 10px;
+    }
+    .slick-dots li.slick-active button{
+      &::before{
+        color: #ffffff;
+      }
+    }
+  }
 }

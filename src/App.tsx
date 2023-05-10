@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import {BLUE} from './colors';
 import UsedCars from "./pages/usedCars/UsedCars";
 import CarDetailPage from "./pages/CarDetailPage/CarDetailPage";
+import BookServicePage from "./pages/BookServicePage/BookServicePage";
 
 const theme = createTheme({
   palette: {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="preowned" element={<UsedCars/>}/>
           <Route path="buy-used-car/:id" element={<CarDetailPage/>}/>
+          <Route path="book-service" element={<BookServicePage/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
