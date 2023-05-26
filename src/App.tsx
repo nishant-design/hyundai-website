@@ -6,7 +6,10 @@ import {BLUE} from './colors';
 import UsedCars from "./pages/usedCars/UsedCars";
 import CarDetailPage from "./pages/CarDetailPage/CarDetailPage";
 import BookServicePage from "./pages/BookServicePage/BookServicePage";
-import Admin from "./pages/admin";
+import AdminLogin from "./pages/admin";
+import { useEffect, useState } from "react";
+import AdminDetails from "./pages/admin/details/AdminDetails";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -17,6 +20,8 @@ const theme = createTheme({
 });
 
 function App() {
+  const [isUserSignedIn, setIsUserSignedIn] = useState(false);
+  
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
@@ -26,7 +31,10 @@ function App() {
           <Route path="preowned" element={<UsedCars/>}/>
           <Route path="buy-used-car/:id" element={<CarDetailPage/>}/>
           <Route path="book-service" element={<BookServicePage/>}/>
-          <Route path="/admin" element={<Admin/>} />
+          <Route path="/admin-login" element={<AdminLogin setIsUserSignedIn={setIsUserSignedIn}/>} />
+          {isUserSignedIn && (
+            <Route path="/admin" element={<AdminDetails/>} />
+          )}
           <Route path="*" element={<div>404 page</div>} />
         </Routes>
       </BrowserRouter>
